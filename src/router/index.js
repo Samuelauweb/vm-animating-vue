@@ -1,30 +1,38 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Jobs from '../views/jobs/Jobs.vue'
-import JobDetails from '../views/jobs/JobDetails.vue'
+import EventList from '@/views/EventList.vue'
+import EventDetails from '@/views/EventDetails.vue'
+import EventCreate from '@/views/EventCreate.vue'
+import ErrorDisplay from '@/views/ErrorDisplay.vue'
+import About from '@/views/About.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'EventList',
+    component: EventList
+  },
+  {
+    path: '/event/:id',
+    name: 'EventDetails',
+    props: true,
+    component: EventDetails
+  },
+  {
+    path: '/event/create',
+    name: 'EventCreate',
+    component: EventCreate
   },
   {
     path: '/about',
     name: 'About',
-    component: About,
+    component: About
   },
   {
-    path: '/jobs',
-    name: 'Jobs',
-    component: Jobs,
-  },
-  {
-    path: '/jobs/:id',
-    name: 'JobDetails',
-    component: JobDetails
-  },
+    path: '/event/:error',
+    name: 'ErrorDisplay',
+    props: true,
+    component: ErrorDisplay
+  }
 ]
 
 const router = createRouter({
