@@ -1,29 +1,16 @@
 <template>
   <div class="home">
-    <h1>This is the home page</h1>
-    <button @click="toggleModal">Open</button>
-    <transition name='fade'> 
-      <div v-if="isOpen" class="modal">
-        <button @click="toggleModal">Close</button>
-      </div>
-    </transition>
+    <h1>Homepage</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptas facere ea vel vitae esse necessitatibus quidem! Assumenda officiis laborum accusamus nostrum omnis impedit possimus, earum dolorem in ab vel, dignissimos veritatis dolorum exercitationem? Excepturi, quis incidunt quaerat iste assumenda, ab itaque distinctio omnis iure exercitationem dolorum deserunt optio molestias.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptas facere ea vel vitae esse necessitatibus quidem! Assumenda officiis laborum accusamus nostrum omnis impedit possimus, earum dolorem in ab vel, dignissimos veritatis dolorum exercitationem? Excepturi, quis incidunt quaerat iste assumenda, ab itaque distinctio omnis iure exercitationem dolorum deserunt optio molestias.</p>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      isOpen: false
-    }
-  },
-  methods: {
-    toggleModal() {
-      this.isOpen = !this.isOpen
-    }
+  name: 'Home',
+  components: {
+    
   }
 }
 </script>
-
-<style>
-</style>
